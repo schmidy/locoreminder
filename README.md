@@ -1,2 +1,0 @@
-# locoreminder
-Location (Geo) Reminder
