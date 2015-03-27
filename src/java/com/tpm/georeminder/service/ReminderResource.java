@@ -92,10 +92,6 @@ public class ReminderResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-//    public Response CreateReminder(
-//            @FormParam("description") String description,
-//            @FormParam("type") String type,
-//            @FormParam("accountId") String accountId) {
     public Response CreateReminder(final JsonReminder newReminder) {
         
         log.debug("Create Reminder REST");
