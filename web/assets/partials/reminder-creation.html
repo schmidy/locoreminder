@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Create a new reminder</h1>
+
+    <form novalidate="novalidate" class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputDescription">Description:</label>
+
+            <div class="controls">
+                <input type="text" id="inputDescription" ng-model="reminder.description" placeholder="Description"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputType">Type:</label>
+
+            <div class="controls">
+                <input type="text" id="inputType" ng-model="reminder.type" placeholder="Type"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="inputAccountId">Account ID:</label>
+
+            <div class="controls">
+                <!--input type="text" id="inputAccountId" ng-model="reminder.accountId" placeholder="Type"/-->
+                <select id="inputAccountId"  ng-model="reminder.accountId" ng-options="account.id as account.fullName for account in Accounts">
+                       <option value="">Select Account</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <div class="controls">
+                <a ng-click="reminderCancel()" class="btn btn-small">cancel</a>
+                <a ng-click="createNewReminder()" class="btn btn-small btn-primary">create a new reminder</a>
+            </div>
+        </div>
+    </form>
+</div>

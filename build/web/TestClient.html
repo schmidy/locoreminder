@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Mike Schmidt
+Regis MSSE692 Software Engineering Practicum
+Spring 2015
+-->
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <title>Geo Reminder</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-app="">
+            <form action="http://localhost/GeoReminder/webresources/account/" method="POST">
+                <fieldset>
+                First name:<br>
+                <input type="text" name="fullName">
+                <br>
+                Last name:<br>
+                <input type="text" name="address">
+                <br>
+                Email:<br>
+                <input type="text" name="email">
+                <br>
+                User Name:<br>
+                <input type="text" name="userName">
+
+                <input type="submit" value="Submit" >
+                </fieldset>
+            </form >
+        </div>
+        <div>
+            <form action="http://localhost/GeoReminder/webresources/reminder/" method="POST">
+                <fieldset>
+                Description:<br>
+                <input type="text" name="description">
+                <br>
+                Reminder Type:<br>
+                <input type="text" name="type">
+                <br>
+                Account ID:<br>
+                <input type="text" name="accountId">
+                <input type="submit" value="Submit" >
+                </fieldset>
+            </form >
+        </div>
+    </body>
+</html>
